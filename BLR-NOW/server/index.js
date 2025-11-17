@@ -26,9 +26,10 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch(err => console.error("Could not connect to MongoDB", err));
 
 // Routes
-const eventRoutes = require('./routes/event.routes');
-app.use('/api/auth', require('./routes/auth.routes')); // ADD THIS LINE
-app.use('/api/events', eventRoutes);
+app.use('/api/events', require('./routes/event.routes'));
+app.use('/api/auth', require('./routes/auth.routes'));
+app.use('/api/rsvp', require('./routes/rsvp.routes')); // <-- ADD THIS
+app.use('/api/profile', require('./routes/profile.routes')); // <-- ADD THIS
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

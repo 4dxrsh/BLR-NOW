@@ -2,6 +2,7 @@ const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
+const auth = require('../middleware/auth.middleware'); // Import auth middleware
 
 // @route   POST /api/auth/register
 // @desc    Register a new user
@@ -67,5 +68,8 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// @route   GET /api/auth/user (DELETED)
+// We are removing this route. The new profile route replaces it.
 
 module.exports = router;

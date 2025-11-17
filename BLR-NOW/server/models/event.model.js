@@ -21,6 +21,19 @@ const eventSchema = new mongoose.Schema({
       required: true,
     },
   },
+  // --- NEW FIELD BELOW ---
+  address: {
+    type: String,
+    default: ''
+  },
+  rules: {
+    type: String,
+    default: 'Be respectful to all attendees.'
+  },
+  attendees: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }]
 }, {
   timestamps: true,
 });
