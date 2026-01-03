@@ -1,5 +1,3 @@
----
-
 # 📍 BLR-NOW: Hyperlocal Event Notice Board
 
 **BLR-NOW** is a map-first, real-time community notice board built with the **MERN Stack**. It is designed to bridge the "hyperlocal disconnect" by allowing residents of Bengaluru to discover and host spontaneous, community-driven events—from pickup football games to pop-up art workshops—happening right outside their door.
